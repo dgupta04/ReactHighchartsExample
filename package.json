@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bizcharts": "^3.5.5",
+    "faker": "^4.1.0",
+    "highcharts": "^7.2.0",
+    "highcharts-react": "0.0.3",
+    "highcharts-react-official": "^2.2.2",
+    "plotly.js": "^1.49.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-plotly": "^1.0.0",
+    "react-plotly.js": "^2.3.0",
     "react-scripts": "3.1.2"
   },
   "scripts": {

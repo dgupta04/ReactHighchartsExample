@@ -1,12 +1,29 @@
-import React from 'react';
+import React,  { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import GraphList from './GraphList'
+import SearchBar from './SearchBar'
+import Card from './Card';
+// import DataSet from '@antv/data-set';
+
+class App extends Component {
+state = {graphs: []}
+displayGraphs = (e) => {
+  e.preventDefault(); 
+  let graphList = []
+  let numG = Math.floor((Math.random()*10 + 1))
+  for(let i=0; i< numG; i++){
+    graphList.push(<Card />)
+  }
+  this.setState({graphs: graphList})
+}
+render() {
+    return (
+      <div className="container">
+      <SearchBar onFormSubmit={this.displayGraphs}/>
+      <GraphList graphs={this.state.graphs}/>
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
