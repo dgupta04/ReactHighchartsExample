@@ -5,7 +5,7 @@
   "dependencies": {
     "bizcharts": "^3.5.5",
     "faker": "^4.1.0",
-    "highcharts": "^7.2.0",
+    "highcharts": "^9.0.0",
     "highcharts-react": "0.0.3",
     "highcharts-react-official": "^2.2.2",
     "plotly.js": "^1.49.5",
